@@ -1,0 +1,846 @@
+@import url(../css/fonts/fonts.css);
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  background: linear-gradient(90deg, black, #e73c7e, purple);
+  background-size: 400% 400%;
+  animation: gradient 10s ease infinite;
+
+  font-family: "Cal-sans";
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.header {
+  background-color: rgb(106, 46, 146);
+  overflow: hidden;
+
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+}
+.logo__inner {
+  width: 100px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.logo__img{
+  width: 50px;
+  height: 50px;
+  border-radius:50% ;
+}
+.logo__img__inner{
+  padding: 2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  border-radius: 50%;
+  
+}
+.header__logo {
+  width: 150px;
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.header__logo__name {
+  font-size: 20px;
+  color: white;
+  width: 200px;
+}
+.container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+  position: relative fixed;
+}
+.overlay {
+  display: none;
+}
+.burger {
+  display: none;
+}
+.verticalNav {
+  display: none;
+}
+.toggle {
+  display: none;
+}
+i {
+  font-size: 30px;
+  background: black;
+}
+
+
+.nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+}
+.nav__link {
+  text-decoration: none;
+  text-decoration-line: none;
+  color: white;
+
+  font-weight: bold;
+  transition: 0.3s;
+  font-size: 20px;
+}
+.nav__link:hover {
+  transform: scale(1.2);
+  
+  color: #43ad99;
+  transition: 0.7s;
+}
+.header__search {
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  border-radius: 10px;
+}
+.header__search:hover {
+  box-shadow: 0px 0px 5px white;
+  transition: 0.2s;
+}
+
+.search {
+  width: 300px;
+  height: 30px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: bolder;
+  color: rgb(0, 0, 0);
+  padding-left: 10px;
+}
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.search:focus {
+  width: 500px;
+  height: 30px;
+  transition: 0.5s;
+}
+
+.nav__buttons {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 200px;
+  margin-right: 50px;
+}
+
+
+.avatar {
+  width: 30px;
+  height: 30px;
+  background: white;
+  border-radius: 50%;
+}
+.link__right2 {
+  position: relative;
+}
+.link__right2::after {
+  content: "";
+  clip-path: polygon(50% 12%, 61% 0, 38% 0);
+  background: white;
+  position: absolute;
+  top: 10px;
+  left: 5px;
+  width: 50px;
+  height: 50px;
+}
+.link__right3 {
+  position: relative;
+}
+.link__right3::after {
+  content: "";
+  clip-path: polygon(50% 12%, 61% 0, 38% 0);
+  background: white;
+  position: absolute;
+  top: 15px;
+  left: 20px;
+  width: 50px;
+  height: 50px;
+}
+.header__inner {
+  position: absolute;
+  top: 600px;
+  left: 100px;
+  z-index: 2;
+  font-size: 50px;
+  color: #fff;
+  font-family: "Cal-sans";
+  letter-spacing: 0;
+  padding: 0.25em 0 0.325em;
+  display: block;
+  margin: 0 auto;
+  text-shadow: 0 0 80px rgba(255, 255, 255, 0.5);
+
+  background: url(../img/2.png) repeat-y;
+  -webkit-background-clip: text;
+  background-clip: text;
+
+  -webkit-text-fill-color: transparent;
+  animation: aitf 80s linear infinite;
+
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+}
+@keyframes aitf {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+.container2 {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  font-family: "textabout";
+  padding: 50px;
+  position: relative;
+}
+
+
+.text__normal {
+  font-size: 30px;
+}
+.text__bold {
+  font-weight: 800;
+  font-size: 50px;
+  color: gold;
+}
+.img__crypto {
+  width: 1300px;
+  height: 500px;
+
+  position: relative;
+}
+.img__crypto::after {
+  position: absolute;
+  content: "This is what ''Coscom'' used to look like";
+  color: gold;
+  bottom: -30px;
+  left: 0;
+  font-size: 25px;
+}
+.img__inner {
+  width: 100%;
+}
+.img__inner2 {
+  width: 1300px;
+  height: 500px;
+}
+.img__crypto2 {
+  width: 1400px;
+  height: 700px;
+
+  position: relative;
+}
+.img__crypto2::after {
+  position: absolute;
+  content: "Можно ли поставить знак равенства между картинами Моне и Пикассо?";
+  color: gold;
+  bottom: -30px;
+  left: 0;
+  font-size: 25px;
+}
+.img__inner3 {
+  width: 1300px;
+  height: 700px;
+  overflow: hidden;
+}
+.img__crypto3 {
+  width: 1300px;
+  height: 700px;
+
+  position: relative;
+}
+.img__crypto3::after {
+  position: absolute;
+  content: "Картина Beeple была продана за $69,3 млн";
+  color: gold;
+  bottom: -30px;
+  left: 0;
+  font-size: 25px;
+}
+.img__inner4 {
+  width: 1300px;
+  height: 700px;
+  overflow: hidden;
+}
+.img__crypto4 {
+  width: 1300px;
+  height: 700px;
+
+  position: relative;
+}
+.img__crypto4::after {
+  position: absolute;
+  content: "NBA Top Shots – зрелищные моменты из игр Национальной баскетбольной ассоциации";
+  color: gold;
+  bottom: -30px;
+  left: 0;
+  font-size: 25px;
+}
+.img__inner5 {
+  width: 1300px;
+  height: 700px;
+  overflow: hidden;
+}
+.img__crypto5 {
+  width: 1300px;
+  height: 700px;
+
+  position: relative;
+}
+.img__crypto5::after {
+  position: absolute;
+  content: "«Черный квадрат» Казимира Малевича в Третьяковской галерее";
+  color: gold;
+  bottom: -30px;
+  left: 0;
+  font-size: 25px;
+}
+.img__inner6 {
+  width: 1300px;
+  height: 700px;
+  overflow: hidden;
+}
+.video__about {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.video__inner {
+  width: 640px;
+  height: 360px;
+}
+iframe {
+  width: 1440px;
+  height: 500px;
+}
+
+.text__curve {
+  font-size: 30px;
+  font-style: oblique;
+}
+.yakor {
+  display: block;
+  color: gold;
+
+  padding: 6px 8px;
+  text-decoration: none;
+
+  border-radius: 4em;
+  transition: 0.3s;
+  position: relative;
+}
+
+.yakor:hover {
+  color: white;
+  transition: 0.3s;
+  transform: scale(1.1);
+}
+.text__content {
+  font-size: 50px;
+  font-style: oblique;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.footer {
+  background: #4e256b;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 500px;
+}
+.footer__content {
+  display: flex;
+  flex-direction: row;
+  gap: 280px;
+}
+
+.footer__card {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 20px;
+}
+.footer__inner__bold {
+  font-weight: 600;
+  font-size: 30px;
+}
+.footer__inner__normal {
+  font-size: 20px;
+  transition: 0.5s;
+  position: relative;
+}
+.footer__inner__normal::before{
+content: "*";
+color: red;
+position: absolute;
+left: -15px;
+
+}
+.container__sub {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(34, 188, 34);
+  height: 500px;
+}
+.container__sub__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.sub__text__bold {
+  font-weight: 600;
+  font-size: 30px;
+}
+.sub__text__norm {
+  font-size: 20px;
+}
+.sub__inner {
+  display: flex;
+  flex-direction: row;
+  gap: 2px;
+}
+.sub__btn {
+  border: none;
+  outline: none;
+  width: 150px;
+  height: 50px;
+  border-radius: 0 15px 15px 0;
+  background-color: red;
+  box-shadow: 0px 0px 2px 2px black;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 400;
+}
+.sub__btn:hover {
+  background-color: grey;
+  opacity: 0.5;
+  transition: 0.5s;
+  cursor: pointer;
+}
+.sub__email {
+  border: none;
+  outline: none;
+  box-shadow: 0px 0px 2px 2px black;
+  width: 300px;
+  height: 50px;
+  border-radius: 15px 0 0 15px;
+}
+.footer__href {
+  text-decoration: none;
+  text-decoration-line: none;
+  color: white;
+}
+.footer__href:hover {
+  color: white;
+  transition: 0.5s;
+}
+.footer__inner__normal:hover {
+ 
+  transition: 0.5s;
+  transform: translateX(10px);
+  
+}
+.footer__social {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+
+
+.container__sub {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  height: 500px;
+}
+.container__sub__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.sub__text__bold {
+  font-weight: 600;
+  font-size: 30px;
+}
+.sub__text__norm {
+  font-size: 20px;
+}
+.sub__inner {
+  display: flex;
+  flex-direction: row;
+  gap: 2px;
+}
+.sub__btn {
+  border: none;
+  outline: none;
+  width: 150px;
+  height: 50px;
+  border-radius: 0 15px 15px 0;
+  background-color: blue;
+  box-shadow: 0px 0px 2px 2px black;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 400;
+}
+.sub__email {
+  border: none;
+  outline: none;
+  box-shadow: 0px 0px 2px 2px black;
+  width: 300px;
+  height: 50px;
+  border-radius: 15px 0 0 15px;
+}
+@media (max-width: 1400px) {
+  body {
+    width: 1400px;
+    animation: gradient 10s ease infinite;
+  }
+  @keyframes gradient {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 80% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  
+  iframe {
+    width: 1300px;
+    height: 400px;
+  }
+  .video__inner {
+    width: 640px;
+    height: 360px;
+  }
+}
+@media (max-width: 1000px) {
+  .link__right2 {
+    display: none;
+  }
+  .link__right3 {
+    display: none;
+  }
+  .flex {
+    justify-content: flex-start;
+  }
+  .search {
+    width: 200px;
+  }
+  .search:focus {
+    width: 400px;
+  }
+}
+@media (max-width: 750px) {
+  .header {
+    position: static;
+  }
+  .footer__inner__normal {
+    font-size: 10px;
+    transition: 0.5s;
+  }
+  .footer__inner__bold {
+    font-weight: 600;
+    font-size: 20px;
+  }
+  
+  
+  .footer__content {
+    width: 750px;
+    gap: 100px;
+  }
+  
+  .overlay {
+    display: block;
+
+    width: 100px;
+    height: 80px;
+    background-color: none;
+  }
+  .burger {
+    display: block;
+  }
+  .overlay > label {
+    cursor: pointer;
+    display: block;
+    position: relative;
+    top: 30px;
+    left: 50px;
+    width: 30px;
+    height: 16px;
+    border-top: 2px solid grey;
+    border-bottom: 2px solid grey;
+  }
+
+  .overlay > label::before {
+    content: "";
+    display: block;
+    position: relative;
+    top: 5px;
+    border-top: 2px solid grey;
+  }
+
+  .verticalNav {
+    display: block;
+    color: #333;
+    position: absolute;
+    top: -600px;
+    left: 0px;
+    height: 400px;
+    width: 750px;
+    padding: 20px;
+    font-size: 22px;
+    box-sizing: border-box;
+    background-color: darkmagenta;
+    transition: top cubic-bezier(0.17, 0.04, 0.03, 0.94);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    z-index: 5000;
+  }
+
+  .verticalNav a {
+    display: block;
+
+    text-decoration: none;
+    transition: 0.2s;
+  }
+
+  .verticalNav a:hover {
+    width: 120px;
+  }
+
+  #toggle {
+    position: absolute;
+    visibility: hidden;
+  }
+
+  #toggle:checked ~ .verticalNav {
+    top: 80px;
+  }
+
+  .search__750px {
+    color: white;
+  }
+  .header__search {
+    display: none;
+  }
+  .nav {
+    display: none;
+  }
+  .search {
+    width: 710px;
+  }
+  .search:focus {
+    width: 710px;
+  }
+  .container {
+    display: flex;
+    justify-content: space-around;
+  }
+  .flex {
+    justify-content: space-between;
+    width: 380px;
+  }
+  .nav__buttons {
+    margin-left: 50px;
+  }
+  body {
+    width: 900px;
+    animation: gradient 10s ease infinite;
+  }
+  @keyframes gradient {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 80% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  iframe {
+    width: 700px;
+    height: 300px;
+  }
+  .video__inner {
+    width: 640px;
+    height: 360px;
+  }
+
+  .img__crypto {
+    width: 700px;
+    height: 300px;
+
+    position: relative;
+  }
+  .img__crypto::after {
+    position: absolute;
+    content: "Криптовалюты – например, Bitcoin, Ethereum или Monero – работают как раз благодаря технологии блокчейна";
+    color: gold;
+    bottom: -30px;
+    left: 0;
+    font-size: 15px;
+  }
+  .img__inner2 {
+    width: 700px;
+    height: 300px;
+  }
+  .img__crypto2 {
+    width: 700px;
+    height: 300px;
+
+    position: relative;
+  }
+  .img__crypto2::after {
+    position: absolute;
+    content: "Можно ли поставить знак равенства между картинами Моне и Пикассо?";
+    color: gold;
+    bottom: -30px;
+    left: 0;
+    font-size: 15px;
+  }
+  .img__inner3 {
+    width: 700px;
+    height: 300px;
+    overflow: hidden;
+  }
+  .img__crypto3 {
+    width: 700px;
+    height: 300px;
+
+    position: relative;
+  }
+  .img__crypto3::after {
+    position: absolute;
+    content: "Картина Beeple была продана за $69,3 млн";
+    color: gold;
+    bottom: -30px;
+    left: 0;
+    font-size: 15px;
+  }
+  .img__inner4 {
+    width: 700px;
+    height: 300px;
+    overflow: hidden;
+  }
+  .img__crypto4 {
+    width: 700px;
+    height: 300px;
+
+    position: relative;
+  }
+  .img__crypto4::after {
+    position: absolute;
+    content: "NBA Top Shots – зрелищные моменты из игр Национальной баскетбольной ассоциации";
+    color: gold;
+    bottom: -30px;
+    left: 0;
+    font-size: 15px;
+  }
+  .img__inner5 {
+    width: 700px;
+    height: 300px;
+    overflow: hidden;
+  }
+  .img__crypto5 {
+    width: 700px;
+    height: 300px;
+
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .img__crypto5::after {
+    position: absolute;
+    content: "«Черный квадрат» Казимира Малевича в Третьяковской галерее";
+    color: gold;
+    bottom: -30px;
+    left: 0;
+    font-size: 15px;
+  }
+  .img__inner6 {
+    width: 700px;
+    height: 300px;
+    overflow: hidden;
+  }
+}
+
+.img__header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+}
+.img__header::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  background: linear-gradient(
+    to bottom,
+    transparent 0%,
+    rgba(0, 0, 0, 0.9) 100%
+  );
+}
