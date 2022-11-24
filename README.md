@@ -1,1 +1,2 @@
 # 00015797
+CW URL of my website - https://shukhrat97.github.io/00015797/ Welcome to my site. As you can see this site represents "Ucell" company and its services. The site is designed to search for information and further use them. This site was created to complete a coursework. Information, namely the text itself was taken from the official website. Mainly the tariffs and the history of the company itself.
